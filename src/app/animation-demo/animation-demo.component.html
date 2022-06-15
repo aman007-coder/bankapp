@@ -1,4 +1,4 @@
-<div>
-    <h4>I am open</h4>
-    <button class="btn btn-warning">Toggle</button>
+<div [@openClose]= " isOpen? 'open' : 'close' " style="padding: 15px 15px;">
+    <h4 style="color: #fff; font-size: 15px;">I am {{isOpen?"open":"Close"}}</h4>
+    <button style="padding: 4px 15px; font-size: 14px;" (click)="toggle()" class="btn btn-warning">Toggle</button>
 </div>
