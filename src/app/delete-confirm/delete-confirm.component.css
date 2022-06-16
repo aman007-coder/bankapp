@@ -1,0 +1,19 @@
+div
+{
+    border: 2px solid #fff;
+    padding: 30px;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+button
+{
+    margin: 0 15px 0;
+}
+h6
+{
+    color: #fff;
+    font-size: 20px;
+    margin: 0 0 20px;
+    text-shadow: black 0 0 20px;
+}
