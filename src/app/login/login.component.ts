@@ -42,14 +42,23 @@ pswd=""
     var pswd = this.loginForm.value.pswd
 
     if(this.loginForm.valid)
-    {
-      const result = this.ds.login(acno,pswd)
+    {// asynchronous
+     this.ds.login(acno,pswd)
+      .subscribe((result:any)=>{
+        if(result){
 
-      if(result)
-      {
-        alert("login succesfull")
-        this.router.navigateByUrl('dashboard')
-      }
+          localStorage.setItem('currentUser',result.currentUser)
+          localStorage.setItem('currentAcno',result.currentAcno)
+          localStorage.setItem('token',result.token)
+
+          alert(result.message)
+          this.router.navigateByUrl('dashboard')
+        }
+      },
+      result=>{
+        alert(result.error.message)
+      })
+     
       
     }
     else

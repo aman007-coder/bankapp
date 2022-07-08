@@ -1,0 +1,123 @@
+                       Angular -front end development
+
+                                           Basic Command
+
+                        1. To install angular cli => npm i -g @angular/cli@latest
+
+                        2. To create new angular project => ng new project-name
+
+                        3. if routing not asked ==> ng new project-name --routing
+
+                        4. ng serve --open => to open project in browser
+
+                        5. ng g c component-name => to generate component
+
+                        6. ng g s service-name => to generate services 
+
+                           note:go to app folder and add new folder services
+                        
+                        7. to build Angular application => ng build --prod   
+
+                    
+                                           Basic concepts
+                     
+                        1. component - to create {html,css,ts file} - root component - AppComponent
+
+                        2. Module - to add libraries to the project - root module - AppModule
+
+                        3. Data Binding - data sharing b/w html and ts
+                           
+                           3.1 one way Binding
+
+                             3.1.1 component(ts) to view(html)
+
+                              3.1.2 String Interpolation: syntax => {{variable-name}} 
+
+                              3.1.3 Property Binding: [attribute]="variable-name"
+
+                           3.2 view to component
+                             
+                             3.2.1 Event Binding -(event)="function-call()"
+
+                             3.2.2 Event Binding using $event - (event)="function-call($event)" 
+
+                             3.2.3 Template Referencing Variable - syntax: #variable-name    
+
+                           3.3 two way Binding
+                             
+                             3.2 using ngmodel - import FormsModule in AppModule,
+                                 syntax: [(ngModel)]="variable-name"  
+
+                          4. to setup path for a component: defined in App Routing Module
+                                 syntax:{path:'',component:componentClassName}    
+                          
+                          5. Dependency Injection - to share data between classes         
+
+                          6. Angular Services - for redundant data
+
+                          7. ngSubmit - to submit entire form.
+                             syntax:(ngSubmit)="function-call"
+
+                           8. Angular Forms
+
+                              8.1 Template Driven Forms - first design html
+
+                              8.2 Model Driven Forms (easy to apply validation) - first create model in ts
+
+                                   8.2.1 Reactive Forms - Add validation : ReactiveFormsModule 
+                                   -form group: FormBuilder Dependency inject, form array, form control
+
+                           9. Angular Directives - To manipulate DOM(Document Object Model)     
+
+                               9.1 Component Directives
+
+                               9.2 Structural Directives - To change DOM Structure
+                                
+                                   9.2.1 ngIf - syntax: *ngIf="condition"
+
+                                   9.2.2 ngFor - syntax: *ngFor="iterator of array-name"
+
+                               9.3 Attribute Directives - to apply set of style to html
+
+                                   9.3.1 predefined - eg: ngClass
+
+                                   9.3.2 userdefined    
+
+                           10. Local Storage - to permenantly store data in browser 
+
+                               10.1 setItem()
+
+                               10.2 getItem()
+
+                               10.3 removeItem() 
+
+                           11. Angular Pipes : to convert the data format
+
+                                 syntax: expression | pipe operator [ : pipe argument] 
+
+                           12. Animation   
+
+                           13. parent - child communication
+
+                               13.1 parent to child : input decorator, syntax:  @input()   
+
+                               13.2 child to parent : output decorator, syntax @output()    
+
+                           14. Event Emitter - to generate userdefined events
+
+                               14.1 emit() - to occur the event      
+
+                           15. Client -Server Integration
+
+                               15.1 API - HttpClient
+
+                           16. Asynchronus function resolving - RxJS
+
+                               16.1 Observable - resolved state - .subscribe()
+                                               - regect state  - catch()        
+
+
+
+                     
+
+         

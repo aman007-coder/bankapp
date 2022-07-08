@@ -29,16 +29,18 @@ export class RegisterComponent implements OnInit {
 
    if(this.registerForm.valid)
    {
-    const result = this.ds.register(uname,acno,pswd)
-    if(result){
-      alert("successfully registered")
-      this.router.navigateByUrl("")
-    }
-    else
-    {
-      alert("Already Exisitng Costumer.....Please Log In!!!!")
- 
-    }
+    this.ds.register(uname,acno,pswd)
+    .subscribe((result:any)=>{
+      if(result){
+        alert(result.message)
+        this.router.navigateByUrl("")
+      }
+     
+    },
+    result=>{
+      alert(result.error.message)
+    })
+   
 
    }
    else
